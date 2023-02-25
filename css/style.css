@@ -1,0 +1,224 @@
+/* verde botones #aed581;
+verde letras #558b2f;
+verde letra botón #175d37*/
+section{
+    display: grid;
+    place-items: center;
+    justify-content: center;
+    align-items: center;
+}
+header{
+    background-color: #aed581;
+    margin: none;
+}
+.formulario{
+    
+    padding-top: 10px;
+    font-family: Arial;
+    color: #175d37da;
+}
+.formulario h2{
+    margin-top: 0px;
+    font-size: 20px;
+}
+.formulario p{
+    font-size: 12px;
+    color: #325519;
+}
+.formulario input{
+    font-family: Arial;
+    font-size: 13px;
+    border-radius: 5px;
+    padding: 5px;
+    border-color: #175d37;
+    
+
+}
+.formulario select{
+    font-family: Arial;
+    font-size: 13px;
+    border-radius: 5px;
+    padding: 5px;
+    border-color: #175d37;
+    width: 182px;
+}
+.formulario textarea{
+    font-family: Arial;
+    font-size: 13px;
+    border-radius: 5px;
+    padding: 5px;
+    border-color: #175d37;
+    width: 200px;
+    height: 100px;
+}
+.inicio h2{
+    display: inline;
+    margin-left: 70px;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+.inicio.desaparecer{
+    display: none;
+}
+.menu{
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+}
+.menu li{
+    color: #175d37;
+    font-size: 20px;
+    display: flex;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    align-items: center;
+}
+a{
+    text-decoration: none;
+    color: #175d37;
+}
+img{
+    justify-content: center;
+    width: 300px;
+    height: 300px;
+    display: block;
+}
+.nada{
+        color: #175d37;
+}
+#addbutton{
+    font-size: 20px;
+    background-color: #aed581;
+    color: #175d37;
+    border-radius: 100%;
+    border: 0;
+    width: 50px;
+    height: 50px;
+    margin: auto;
+    right: 20px;
+    bottom: 20px;
+    position: fixed;
+}
+.cerrar{
+    font-size: 10px;
+    background-color: #c5e1a5;
+    color: #175d37;
+    border-radius: 100%;
+    border: 0;
+    width: 30px;
+    height: 30px;
+    margin: auto;
+    right: 10px;
+    top: 10px;
+    float: right;
+    display: inline;
+}
+#addbutton.inactive{
+    display: none;
+}
+.popup{
+    background-color: #aed581;
+    padding: 20px;
+    border-radius: 10px;
+    display: none;
+}
+.popup.active{
+    display: flex;
+}
+.popup p{
+    margin-bottom: 5px;
+}
+.prioridad button{
+    width: 10px;
+    height: 15px;
+    border: none;
+    border-radius: 2px;
+}
+
+#rojo{
+    background-color: #d50000;
+}
+#verde{
+    background-color: #388e3c;
+}
+#naranja{
+    background-color: #ff6d00;
+}
+#gris{
+    background-color: #bdbdbd;
+}
+#gris.elegida{
+    width: 15px;
+    height: 20px;
+}
+#rojo.elegida{
+    width: 15px;
+    height: 20px;
+}
+#verde.elegida{
+    width: 15px;
+    height: 20px;
+}
+#naranja.elegida{
+    width: 15px;
+    height: 20px;
+}
+.finalizar{
+    padding: 9px;
+    font-size: 12px;
+    color: #212121;
+    border-radius: 10px;
+    margin: auto;
+    box-align: right;
+    float: right;
+    margin: 5px;
+    border-color: #175d37;
+    border-width: 1px;
+}
+#crear{
+    background-color: #8bc34a;
+}
+#crear:hover{
+    background-color: #558b2f;
+
+}
+#cancelar{
+    background-color: #c5e1a5;
+}
+#cancelar:hover{
+    background-color: #558b2f;
+}
+#contenedor{
+    height: fit-content;
+    width: 90vw;
+    align-content: center;
+    background-color: #aed581e0;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: left;
+    border-radius: 10px;
+    line-height: 3px;
+    margin: 10px;
+    align-items: center;
+}
+.icono{
+    width: 40px;
+    height: 40px;
+    float: left;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+
+.check{
+    align-self: center;
+    float: right;
+    display: inline;
+    left: 90px;
+    bottom: 90px;
+    margin: auto;
+}
+.check:checked{
+    background-color: #175d37;
+}

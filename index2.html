@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do list</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <ul class="menu">
+            <li>
+                <a href=""><span class="material-symbols-outlined"> menu </span></a>
+            </li>
+            <li><p>To do list</p></li>
+            <li>
+                <a href=""><span class="material-symbols-outlined">account_circle</span></a>
+            </li>
+        </ul>
+    </header>
+    <section>
+        
+        <div id="contenedor" ></div>
+
+        <div class="inicio">
+        <img src="images/rana.png" alt="">
+        <h2 class="nada">¡No hay tareas!</h2>
+        </div>
+        <div class="popup">
+            <div class="popoupinner">
+                <button class="cerrar"><strong>X</strong></button>
+                <form class="formulario">
+                    <h2>Ingresa una tarea</h2>
+                    <p>Título de la tarea</p>
+                    <input type="text" placeholder="¿Qué hay que hacer?" id="tit">
+                    <p>Tipo de tarea</p>
+                    <select name="" id="tipo">
+                        <option value=""></option>
+                        <option value="Personal">Personal</option>
+                        <option value="Doméstica">Doméstica</option>
+                        <option value="Entretenimiento">Entretenimiento</option>
+                        <option value="Laboral">Laboral</option>
+                    </select>
+                    <p>Descripción</p>
+                    <textarea name="" id="desc" cols="30" rows="10" placeholder="¿Cómo hay que hacerlo?"></textarea>
+                    <div class="prioridad">
+                    <p>Prioridad</p>
+                    <button  id="gris" value="1">    </button>
+                    <button  id="verde" value="2">    </button>
+                    <button  id="naranja" value="3">    </button>
+                    <button  id="rojo" value="4">    </button> <br><br>
+                    </div>
+                    <div>
+                    <button class="finalizar" id="crear">Crear</button>
+                    <button class="finalizar" id="cancelar">Cancelar</button>
+
+                    </div>
+                </form>
+                
+            </div>
+        </div>
+        <button id="addbutton">+</button>
+
+        </div>
+    </section>
+
+    <script src="main.js"></script>
+</body>
+</html>
