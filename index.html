@@ -23,7 +23,7 @@
     </header>
     <section>
         
-        <div id="contenedor" ></div>
+        <div id="contenedorPrimero" ></div>
 
         <div class="inicio">
         <img src="images/rana.png" alt="">
@@ -40,18 +40,20 @@
                     <select name="" id="tipo">
                         <option value=""></option>
                         <option value="Personal">Personal</option>
-                        <option value="Doméstica">Doméstica</option>
+                        <option value="Domestica">Doméstica</option>
                         <option value="Entretenimiento">Entretenimiento</option>
                         <option value="Laboral">Laboral</option>
                     </select>
                     <p>Descripción</p>
                     <textarea name="" id="desc" cols="30" rows="10" placeholder="¿Cómo hay que hacerlo?"></textarea>
-                    <div class="prioridad">
+                    <div >
                     <p>Prioridad</p>
-                    <button  id="gris" value="1">    </button>
-                    <button  id="verde" value="2">    </button>
-                    <button  id="naranja" value="3">    </button>
-                    <button  id="rojo" value="4">    </button> <br><br>
+                    <input class="prioridad-baja" type="radio" name="formPrioridad" id="form-prioridad" value="baja">
+                    <input class="prioridad-media" type="radio" name="formPrioridad" id="form-prioridad" value="media">
+                    <input class="prioridad-alta" type="radio" name="formPrioridad" id="form-prioridad" value="alta">
+                    <input class="prioridad-urgente" type="radio" name="formPrioridad" id="form-prioridad" value="urgente">
+                    
+                    <br><br>
                     </div>
                     <div>
                     <button class="finalizar" id="crear">Crear</button>
