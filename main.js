@@ -13,10 +13,11 @@ let tit = document.querySelector('#tit');
 let addButton = document.querySelector('#addbutton')
 let cerrarpop = document.querySelector('.cerrar')
 let prioridades = document.querySelectorAll('.prioridad')
-/*let prioridadUno = document.querySelector('#gris')
-let prioridadDos = document.querySelector('#verde')
-let prioridadTres = document.querySelector('#naranja')
-let prioridadCuatro = document.querySelector('#rojo')*/
+let prioridadUno = document.querySelector('.prioridad gris')
+let prioridadDos = document.querySelector('.prioridad verde')
+let prioridadTres = document.querySelector('.prioridad naranja')
+let prioridadCuatro = document.querySelector('.prioridad rojo')
+
 let crearTarea = document.querySelector('#crear')
 let cancelarTarea = document.querySelector('#cancelar')
 
@@ -38,32 +39,6 @@ cerrarpop.addEventListener('click', ()=>{
 }
 })
 
-//para que se vea qué prioridad se selecciona
-/*prioridadUno.addEventListener('click', ()=>{
-    prioridadUno.classList.add('elegida')
-    prioridadDos.classList.remove('elegida')
-    prioridadTres.classList.remove('elegida')
-    prioridadCuatro.classList.remove('elegida')
-})
-prioridadDos.addEventListener('click', ()=>{
-    prioridadDos.classList.add('elegida')
-    prioridadUno.classList.remove('elegida')
-    prioridadTres.classList.remove('elegida')
-    prioridadCuatro.classList.remove('elegida')
-})
-prioridadTres.addEventListener('click', ()=>{
-    prioridadTres.classList.add('elegida')
-    prioridadUno.classList.remove('elegida')
-    prioridadDos.classList.remove('elegida')
-    prioridadCuatro.classList.remove('elegida')
-})
-prioridadCuatro.addEventListener('click', ()=>{
-    prioridadCuatro.classList.add('elegida')
-    prioridadUno.classList.remove('elegida')
-    prioridadTres.classList.remove('elegida')
-    prioridadDos.classList.remove('elegida')
-})*/
-
 
 
 //para que el formulario no actúe por default
@@ -76,8 +51,10 @@ crearTarea.addEventListener('click', ()=>{
     //acá traigo el valor del tipo de tarea elegida
     let tipoa = tipo.value
     console.log(tipoa)
+    let formPrioridades = document.querySelector('input[name=prioridad]:checked').value
+
     //creo el modelo que se tiene que imprimir en la lista
-    let modelo = `<ul class='a'><div id= 'contenedor'>
+    let modelo = `<ul class='a'><div id= 'contenedor' class="prioridad-${formPrioridades}">
     <img src="images/${tipoa}.png" alt="" class="icono" id='foto'>    
     <h1>${tit.value}</h1>
     <br>
@@ -87,28 +64,17 @@ crearTarea.addEventListener('click', ()=>{
     </div></ul>`
     contenedorTareas.innerHTML += modelo;
     
-    //hago que la selección de prioridad ponga el color correspondiente
-    let formPrioridades = document.getElementsByName('formPrioridad');
-    let colorPrioridad = formPrioridades.value;
-    let contenedor = document.getElementById('contenedor')
-        console.log(colorPrioridad);
-    if (colorPrioridad == 'baja'){
-        console.log('prioridad baja');
-        contenedor.classList.add('gris')
-    }
-    if (colorPrioridad == 'media'){
-        console.log('prioridad media')
-        contenedor.classList.add('verde')
-    }
-    if (colorPrioridad == 'alta'){
-        console.log('prioridad alta')
-        contenedor.classList.add('naranja')
-    }
-    if (colorPrioridad == 'urgente'){
-        console.log('prioridad urgente')
-        contenedor.classList.add('rojo')
-    }
-
+    //hago que la selección de prioridad ponga el color correspondiente    
+        console.log(formPrioridades)
+        if(formPrioridades == ['gris']){
+            console.log('gris');
+        }else if(formPrioridades == ['verde']){
+            console.log('verde');
+        }else if(formPrioridades == ['naranja']){
+            console.log('amarillo');
+        }else if(formPrioridades == ['rojo']){
+            console.log('rojo');
+        }
 
 
 
@@ -122,24 +88,19 @@ crearTarea.addEventListener('click', ()=>{
     desc.value = "";
     tipo.value = "";
     
-    
-    /*prioridadUno.classList.remove('elegida')
-    prioridadDos.classList.remove('elegida')
-    prioridadTres.classList.remove('elegida')
-    prioridadCuatro.classList.remove('elegida')*/
-    
 
-//hago que se pueda borrar la tarea
+    //hago que se pueda borrar la tarea
     let ul = document.querySelector('.a')
     let eliminar = document.querySelector('.delete')
+    
     eliminar.addEventListener('click', ()=>{
         console.log('a')
         ul.classList.add('borrame')
-    })
+    });
     //me falta hacer que los demás se puedan eliminar y no solo el primero
 })
 
-//evento cancelar tarea
+    //evento cancelar tarea
 cancelarTarea.addEventListener('click', ()=>{
     console.log('soy la cancelación')
     if(formulario != 'submit'){
@@ -153,11 +114,6 @@ cancelarTarea.addEventListener('click', ()=>{
 }
 })
 //me faltó entender cómo hacer para que si no hay tareas vuelva el inicio, no se me ocurrio la condición
-
-
-/*let prioridad = document.querySelector('button[name=formPrioridad]')
-let prioridadElegida = prioridad.value
-console.log(prioridadElegida)*/
 
 
 

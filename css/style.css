@@ -133,6 +133,7 @@ img{
     padding: 20px;
     border-radius: 10px;
     display: none;
+    height: fit-content;
 }
 .popup.active{
     display: flex;
@@ -158,53 +159,46 @@ input[type="radio"] {
     border-radius: 5px;
     
 }
-.prioridad-baja{
+.gris{
     background-color: #a8a8a8;
 
 }
-#contenedor.gris{
-    border-right: 5px;
-    border-color: #a8a8a8;
 
-}
-.prioridad-baja:checked {
+input[class= 'prioridad gris']:checked {
     width: 25px;
     height: 25px;
     border: 3px;
     border-color: #929292;
     border-radius: 5px;
 }
-.prioridad-media{
+.verde{
     background-color: #388e3c;
 }
 
-#contenedor.verde{
-    border-right: 5px;
-    border-color: #388e3c;
-}
-.prioridad-media:checked {
+
+input[class= 'prioridad verde']:checked {
     width: 25px;
     height: 25px;
     border: 3px;
     border-color: #358338;
     border-radius: 5px;
 }
-.prioridad-alta{
+.naranja{
     background-color: #ff6d00;
 }
 
-.prioridad-alta:checked {
+input[class= 'prioridad naranja']:checked {
     width: 25px;
     height: 25px;
     border: 3px;
     border-color: #e66300;
     border-radius: 5px;
 }
-.prioridad-urgente{
+.rojo{
     background-color: #d50000;
 }
 
-.prioridad-urgente:checked {
+input[class= 'prioridad rojo']:checked {
     width: 25px;
     height: 25px;
     border: 3px;
@@ -212,35 +206,9 @@ input[type="radio"] {
     border-radius: 5px;
 }
 
-#contenedor.rojo{
-    border-right: 5px;
-    border-color: #d50000;
-}
-
-#contenedor.naranja{
-    border-right: 5px;
-    border-color: #ff6d00;
-}
-
-#gris.elegida{
-    width: 15px;
-    height: 20px;
-}
-#rojo.elegida{
-    width: 15px;
-    height: 20px;
-}
-#verde.elegida{
-    width: 15px;
-    height: 20px;
-}
-#naranja.elegida{
-    width: 15px;
-    height: 20px;
-}
 .finalizar{
     padding: 9px;
-    font-size: 12px;
+    font-size: 10px;
     color: #212121;
     border-radius: 10px;
     margin: auto;
@@ -249,7 +217,9 @@ input[type="radio"] {
     margin: 5px;
     border-color: #175d37;
     border-width: 1px;
+    display: block;
 }
+
 #crear{
     background-color: #8bc34a;
 }
@@ -290,14 +260,6 @@ ul{
     padding-right: 10px;
 }
 
-/*.check{
-    align-self: center;
-    float: right;
-    display: inline;
-    left: 90px;
-    bottom: 90px;
-    margin: auto;
-}*/
 .check:checked{
     background-color: #175d37;
 }
@@ -334,10 +296,15 @@ ul.borrame{
     display: none;
 }
 
-
-/*prueba*/
-
-
-
-  /*    border: 2px solid blue;
-  background-color: blue;
+.prioridad-gris {
+    border-right: solid 4px #a8a8a8;
+}
+.prioridad-verde {
+    border-right: solid 4px #388e3c;
+}
+.prioridad-naranja {
+    border-right: solid 4px #ff6d00;
+}
+.prioridad-rojo {
+    border-right: solid 4px #d50000;
+}
