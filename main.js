@@ -1,6 +1,8 @@
 //pagina de inicio
 let inicio = document.querySelector('.inicio')
 let contenedorTareas = document.querySelector("#contenedorPrimero")
+let contenedorTareasA = document.querySelector("#contenedorTareasA")
+
 //formulario
 let popup = document.querySelector('.popup')
 let formulario = document.querySelector('.formulario')
@@ -21,11 +23,17 @@ let prioridadCuatro = document.querySelector('.prioridad rojo')
 let crearTarea = document.querySelector('#crear')
 let cancelarTarea = document.querySelector('#cancelar')
 
+
+
+
+
+
 //comportamientos de botón add y cerrar
 addButton.addEventListener('click', ()=>{
     popup.classList.add('active')
     addButton.classList.add('inactive')
     inicio.classList.add('desaparecer')
+    contenedorTareasA.classList.add('desaparecer')
 })
 cerrarpop.addEventListener('click', ()=>{
     if(formulario == 'submit'){
@@ -46,23 +54,35 @@ formulario.addEventListener('submit', (e)=>{
     e.preventDefault()
 })
 
+let idInicial = 1
+const borarTarea = (id) => {
+    console.log(id);
+    let item = document.querySelector(`[data-id="${id}" ]`)
+    item.remove()
+  }
 //evento crear tarea
 crearTarea.addEventListener('click', ()=>{
     //acá traigo el valor del tipo de tarea elegida
     let tipoa = tipo.value
     console.log(tipoa)
     let formPrioridades = document.querySelector('input[name=prioridad]:checked').value
+    
 
     //creo el modelo que se tiene que imprimir en la lista
-    let modelo = `<ul class='a'><div id= 'contenedor' class="prioridad-${formPrioridades}">
-    <img src="images/${tipoa}.png" alt="" class="icono" id='foto'>    
+    let modelo = `<li id= 'contenedor' class="prioridad-${formPrioridades}">
+    <div class="contenido">
+    <img src="images/${tipoa}.png" alt="" class="icono" id='foto'> 
+    </div>
+    <div class="">
     <h1>${tit.value}</h1>
-    <br>
-    <button class="delete"><span class="material-symbols-outlined">delete</span></button>
-    <input type="checkbox" class='check'>
     <p>${desc.value}</p>
-    </div></ul>`
-    contenedorTareas.innerHTML += modelo;
+    </div>
+    <div class="botones">
+    <button class="delete" onclick="borrarTarea(${idInicial++})"><span class="material-symbols-outlined">delete</span></button>
+    <input type="checkbox" class='check'>
+    </div>
+    </li>`
+    contenedorTareasA.innerHTML += modelo;
     
     //hago que la selección de prioridad ponga el color correspondiente    
         console.log(formPrioridades)
@@ -90,13 +110,13 @@ crearTarea.addEventListener('click', ()=>{
     
 
     //hago que se pueda borrar la tarea
-    let ul = document.querySelector('.a')
+    /*let ul = document.querySelector('.a')
     let eliminar = document.querySelector('.delete')
     
     eliminar.addEventListener('click', ()=>{
         console.log('a')
         ul.classList.add('borrame')
-    });
+    });*/
     //me falta hacer que los demás se puedan eliminar y no solo el primero
 })
 

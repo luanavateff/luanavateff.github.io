@@ -10,11 +10,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;700&family=Lora:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
-
 </head>
 <body>
     <header>
-        <ul class="menu">
+        <ul class="menu" style="margin: 0px 0px 8px 0px;">
             <li>
                 <a href=""><span class="material-symbols-outlined"> menu </span></a>
             </li>
@@ -26,7 +25,7 @@
     </header>
     <section>
         
-        <div id="contenedorPrimero" ></div>
+        <div id="contenedorPrimero" > <ul id="contenedorTareasA" class='a'></ul></div>
 
         <div class="inicio">
         <img src="images/rana.png" alt="">
@@ -38,9 +37,9 @@
                 <form class="formulario">
                     <h2>Ingresa una tarea</h2>
                     <p>Título de la tarea</p>
-                    <input type="text" placeholder="¿Qué hay que hacer?" id="tit">
+                    <input type="text" placeholder="¿Qué hay que hacer?" id="tit" required>
                     <p>Tipo de tarea</p>
-                    <select name="" id="tipo">
+                    <select name="" id="tipo" required>
                         <option value=""></option>
                         <option value="personal">Personal</option>
                         <option value="domestica">Doméstica</option>
@@ -48,7 +47,7 @@
                         <option value="laboral">Laboral</option>
                     </select>
                     <p>Descripción</p>
-                    <textarea name="" id="desc" cols="30" rows="10" placeholder="¿Cómo hay que hacerlo?"></textarea>
+                    <textarea name="" id="desc" cols="30" rows="10" placeholder="¿Cómo hay que hacerlo?" required></textarea>
                     <p>Prioridad</p>
                         <div class="prioridadTareaCheck">
                             <input type="radio" class="prioridad gris" name="prioridad" id='gris' value="gris">
@@ -59,10 +58,7 @@
                     <div>
                     <button class="finalizar" id="crear">Crear</button>
                     <button class="finalizar" id="cancelar">Cancelar</button>
-
                     </div>
-                    </div>
-                    
                 </form>
                 
             </div>

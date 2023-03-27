@@ -1,0 +1,91 @@
+body{
+    background: black;
+    color: whitesmoke;
+}
+#gif{
+    width: auto;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin: 0px;
+}
+.titulo{
+    font-family: 'game_of_thronesregular';
+    color: #ffc107;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+#home h1{
+    font-size: 30px;
+    margin: 10px;
+}
+#home h2{
+    margin-bottom: 15px;
+}
+
+#home{
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+    align-items: center;
+    height: 70vh;
+}
+#home label{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    color: #ffcc32;
+
+}
+#home input{
+    background-color: lightgrey;
+}
+#btnJugar{
+    font-family: 'Cinzel', serif;
+    margin-top: 15px;
+    margin-left: 132px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    background-color: #ffc107;
+    border-color: yellow;
+    border-radius: 3px;
+    color: black;
+    float: right;
+}
+#btnJugar:hover{
+    background-color: lightgrey;
+}
+#btnVolver{
+    font-family: 'Cinzel', serif;
+    margin-top: 15px;
+    background-color: #ffc107;
+    border-color: yellow;
+    border-radius: 3px;
+    color: black;
+}
+#btnResultado{
+    font-family: 'Cinzel', serif;
+    margin-top: 15px;
+    background-color: #ffc107;
+    border-color: yellow;
+    border-radius: 3px;
+    color: black;
+}
+#resultado{
+    height: 90vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+#resultado h1{
+    font-family: 'game_of_thronesregular';
+    color: #ffc107;
+    display: flex;
+    justify-content: center;
+}
